@@ -24,12 +24,3 @@ make
 sudo make install
 
 onedrive
-
-apt install -y lib32z1 lib32ncurses5
-apt install network-manager-openconnect
-systemctl daemon-reload
-
-cd ~/Downloads
-tar xf vpn_4603049_linux.gz
-cd ./anyconnect-linux64-4.6.03049/vpn/
-sudo ./vpn_install.sh
