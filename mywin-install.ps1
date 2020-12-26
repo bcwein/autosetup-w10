@@ -1,2 +1,0 @@
-﻿Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-choco install 7zip anaconda3 deluge discord firefox git jre8 logitechgaming mailspring nordvpn rufus spotify unity vlc vscode plexmediaserver minecraft
