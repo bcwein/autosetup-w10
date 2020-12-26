@@ -2,7 +2,7 @@
 
 This repository is how i have automated the setup of my own personal windows 10 computer. The main goal is that after a fresh windows 10 installation i can automatically install all software and have a computer that is as similar as possible as before a new installation was set up.
 
-# Runninc the code
+# Runningthe code
 This code must be executed in a elevated powershell prompt. Also, a XML file containing the list of chocolatey packages to install must be added since i have not added my personal XML file to this github. See https://docs.chocolatey.org/en-us/choco/commands/install?#packages.config for a sample config.
 
 # Pros and Cons
