@@ -10,6 +10,7 @@ This code must be executed in a elevated powershell prompt. Also, a XML file con
 - This setup can install and upgrade packages
   
 ## Cons
-- It does not remove unecessary packages. (If i remove a package from env.config it is not uninstalled on my machine)
-  
-Hopefully, the con above will be solved when this issue is closed https://github.com/chocolatey/choco/issues/533
+1. It does not remove unecessary packages. (If i remove a package from env.config it is not uninstalled on my machine)
+2. Feature updates must be installed through GUI.
+
+Hopefully, con 1. above will be solved when this issue is closed https://github.com/chocolatey/choco/issues/533
