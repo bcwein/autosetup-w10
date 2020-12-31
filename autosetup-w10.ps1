@@ -6,7 +6,6 @@ catch {
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))    
 }
 
-
 # Path to XML file containing chocolatey packages
 # Sample config: https://docs.chocolatey.org/en-us/choco/commands/install?#packages.config
 $config = ".\env.config"
@@ -20,11 +19,13 @@ if (Test-Path $config) {
     Write-Output("Config file Missing")
 }
 
-# Try to install windows updates
+# Try to Install regular windows updates
 try {
-    Get-WUInstall -MicrosoftUpdate -Download -Install -AcceptAll
+    Get-WindowsUpdate -Download -Install -AcceptAll
+    Get-WindowsUpdate -MicrosoftUpdate -Download -Install -AcceptAll
 } # Otherwise, install PSWindowsUpdate and install updates.
 catch {
-    Install-Module -Name PSWindowsUpdate 
-    Get-WUInstall -MicrosoftUpdate -Download -Install -AcceptAll
+    Install-Module -Name PSWindowsUpdate -Force
+    Get-WindowsUpdate -Download -Install -AcceptAll -y
+    Get-WindowsUpdate -MicrosoftUpdate -Download -Install -AcceptAll
 }
