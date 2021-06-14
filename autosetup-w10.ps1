@@ -8,7 +8,9 @@ catch {
 
 # Path to XML file containing chocolatey packages
 # Sample config: https://docs.chocolatey.org/en-us/choco/commands/install?#packages.config
-$config = ".\env.config"
+
+Set-Location "C:\gits\DS\autosetup-w10"
+$config = "env.config"
 
 if (Test-Path $config) {
     choco install env.config
