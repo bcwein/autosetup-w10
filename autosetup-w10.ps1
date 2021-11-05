@@ -18,7 +18,8 @@ if (Test-Path $config) {
     # Export upgraded packages to env.config
     .\Export-Chocolatey.ps1 > env.config
 } else {
-    Write-Output("Config file Missing")
+    Write-Output("Config file Missing...exporting existing environment.")
+    .\Export-Chocolatey.ps1 > env.config
 }
 
 # Try to Install regular windows updates
